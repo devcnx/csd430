@@ -1,0 +1,6 @@
+# Ignore all files in the docs directory
+docs/*
+
+# macOS system files
+.DS_Store
+
