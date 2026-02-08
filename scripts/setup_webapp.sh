@@ -90,7 +90,7 @@ cat > "$APP_DIR/index.jsp" << EOF
 <html>
 <head>
     <meta charset="UTF-8">
-    <title><%= application.getServletContext().getServletContextName() %></title>
+    <title><%= application.getServletContextName() %></title>
     <style>
         body {
             font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, sans-serif;
@@ -118,7 +118,7 @@ cat > "$APP_DIR/index.jsp" << EOF
     </style>
 </head>
 <body>
-    <h1>Welcome to <%- application.getServletContext().getServletContextName() %></h1>
+    <h1>Welcome to <%= application.getServletContextName() %></h1>
     
     <div class="info-box">
         <p>This is a JavaServer Page (JSP) running on Apache Tomcat.</p>
