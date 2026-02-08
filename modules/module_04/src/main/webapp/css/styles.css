@@ -1,0 +1,319 @@
+/*
+    styles.css - External CSS for Module 4 assignment
+    Author: Brittaney Perry-Morgan
+    Description: Styles for the JavaBean movie data display.
+*/
+
+/* =========================
+   1. GLOBAL STYLES
+   ========================= */
+
+*,
+html,
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Arial, sans-serif;
+    background: linear-gradient(120deg, #f8fafc 0%, #e0e7ef 100%);
+    margin: 0;
+    padding: 20px;
+    min-height: 100vh;
+}
+
+/* =========================
+   2. LAYOUT & CONTAINER
+   ========================= */
+
+.container,
+.top-title {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.container {
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 4px 24px rgba(0, 0, 0, 0.08);
+    margin-bottom: 20px;
+}
+
+.top-title {
+    text-align: center;
+    background: linear-gradient(135deg, #2a3a5e 0%, #1a2540 100%);
+    color: #fff;
+}
+
+.top-title h1 {
+    color: #fff;
+    margin: 0 0 10px 0;
+}
+
+.top-title h2 {
+    color: #e0e7ef;
+    margin: 0;
+    font-weight: 400;
+}
+
+.top-title h2 em {
+    font-style: normal;
+    color: #a3d9ff;
+}
+
+/* =========================
+   3. TYPOGRAPHY
+   ========================= */
+
+h1,
+h2,
+h3 {
+    color: #2a3a5e;
+    margin: 20px 0 15px 0;
+    text-transform: uppercase;
+}
+
+h1 {
+    font-weight: 200;
+    font-size: 1.8rem;
+}
+
+h2 {
+    font-weight: 400;
+    font-size: 1.4rem;
+}
+
+h3 {
+    font-weight: 600;
+    font-size: 1.1rem;
+    color: #1a2540;
+    border-bottom: 2px solid #e3eaf6;
+    padding-bottom: 8px;
+}
+
+p.description {
+    color: #ffffff;
+    line-height: 1.7;
+    margin: 15px auto;
+    padding: 0 20px;
+}
+
+/* =========================
+   4. LISTS
+   ========================= */
+
+.field-descriptions {
+    list-style: none;
+    padding: 0 20px;
+}
+
+.field-descriptions li {
+    padding: 10px 15px;
+    margin: 8px 0;
+    background: #f1f5fa;
+    border-radius: 6px;
+    border-left: 4px solid #2a3a5e;
+    color: #444;
+}
+
+/* =========================
+   5. NAVIGATION
+   ========================= */
+
+nav ul {
+    list-style: none;
+    padding: 0 20px;
+}
+
+nav ul li {
+    margin: 10px 0;
+}
+
+nav ul li a {
+    color: #2a3a5e;
+    text-decoration: none;
+    font-weight: 600;
+    padding: 8px 12px;
+    background: #f1f5fa;
+    border-radius: 6px;
+    transition: all 0.2s ease;
+}
+
+nav ul li a:hover {
+    background: #2a3a5e;
+    color: #fff;
+}
+
+/* =========================
+   6. FORM ACTIONS (for button links)
+   ========================= */
+
+.form-actions {
+    margin: 30px 20px;
+    padding: 15px;
+    background: #f9fbfd;
+    border-radius: 8px;
+    text-align: center;
+}
+
+.btn-submit,
+.btn-reset {
+    padding: 12px 24px;
+    margin: 0 10px;
+    font-size: 1rem;
+    font-weight: 600;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    text-decoration: none;
+    display: inline-block;
+}
+
+.btn-submit {
+    background: #2a3a5e;
+    color: #fff;
+}
+
+.btn-submit:hover {
+    background: #1a2540;
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px rgba(42, 58, 94, 0.3);
+}
+
+.btn-reset {
+    background: #e3eaf6;
+    color: #2a3a5e;
+}
+
+.btn-reset:hover {
+    background: #cdd8eb;
+}
+
+/* =========================
+   7. TABLES
+   ========================= */
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px;
+    background: #fff;
+}
+
+thead {
+    background: #2a3a5e;
+    color: #fff;
+}
+
+th,
+td {
+    border: 1px solid #e3eaf6;
+    padding: 12px 15px;
+    text-align: left;
+}
+
+th {
+    font-weight: 600;
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+td {
+    font-size: 0.95rem;
+    color: #333;
+    vertical-align: top;
+}
+
+tr:nth-child(even) {
+    background: #f9fbfd;
+}
+
+tr:hover {
+    background: #e8f0ff;
+    transition: background 0.2s ease;
+}
+
+/* =========================
+   8. FOOTER
+   ========================= */
+
+footer {
+    text-align: center;
+    padding: 20px;
+    color: #666;
+    font-size: 0.9rem;
+}
+
+footer p {
+    margin: 0;
+}
+
+/* =========================
+   9. RESPONSIVE DESIGN
+   ========================= */
+
+@media (max-width: 768px) {
+    body {
+        padding: 10px;
+    }
+
+    .container,
+    .top-title {
+        padding: 15px;
+    }
+
+    h1 {
+        font-size: 1.4rem;
+    }
+
+    h2 {
+        font-size: 1.1rem;
+    }
+
+    h3 {
+        font-size: 1rem;
+    }
+
+    table {
+        margin: 10px 0;
+        font-size: 0.85rem;
+    }
+
+    th,
+    td {
+        padding: 8px 10px;
+    }
+
+    p.description {
+        padding: 0 10px;
+    }
+
+    .field-descriptions {
+        padding: 0 10px;
+    }
+
+    .field-descriptions li {
+        padding: 8px 12px;
+    }
+
+    nav ul {
+        padding: 0 10px;
+    }
+
+    .form-actions {
+        margin: 20px 10px;
+        padding: 10px;
+    }
+
+    .btn-submit,
+    .btn-reset {
+        padding: 10px 16px;
+        font-size: 0.9rem;
+        margin: 5px;
+    }
+}
