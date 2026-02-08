@@ -2,6 +2,9 @@
 # ------------------------------------------------------------
 # deploy_modules.sh
 # Deploy every module (or snippet) that contains a webapp to Tomcat.
+# Usage: ./deploy_modules.sh [module_name] [base_dir]
+#   module_name - Optional specific module to deploy (e.g., "module_01")
+#   base_dir    - Optional base directory ("modules" or "snippets", default: "modules")
 # ------------------------------------------------------------
 
 # Ensure CATALINA_HOME is set – abort if not.
@@ -34,17 +37,40 @@ deploy_module() {
   fi
 }
 
-# Walk through each base directory
-for base in "${BASE_DIRS[@]}"; do
-  if [[ -d "$base" ]]; then
-    for module_dir in "$base"/*/; do
-      # Guard against empty globs
-      [[ -d "$module_dir" ]] || continue
-      deploy_module "$module_dir"
-    done
-  else
-    echo "Warning: $base directory does not exist"
-  fi
-done
+# Check if specific module was requested
+if [[ -n "$1" ]]; then
+  # Specific module deployment
+  module_name="$1"
+  base_dir="${2:-modules}"
 
-echo "Deployment completed."
+  # Validate base_dir
+  if [[ ! " ${BASE_DIRS[*]} " =~ $base_dir ]]; then
+    echo "Error: Invalid base directory '$base_dir'. Must be 'modules' or 'snippets'."
+    exit 1
+  fi
+
+  module_path="$base_dir/$module_name"
+
+  if [[ -d "$module_path" ]]; then
+    deploy_module "$module_path"
+    echo "Deployment completed."
+  else
+    echo "Error: Module '$module_name' not found in '$base_dir/'"
+    exit 1
+  fi
+else
+  # Deploy all modules (original behavior)
+  for base in "${BASE_DIRS[@]}"; do
+    if [[ -d "$base" ]]; then
+      for module_dir in "$base"/*/; do
+        # Guard against empty globs
+        [[ -d "$module_dir" ]] || continue
+        deploy_module "$module_dir"
+      done
+    else
+      echo "Warning: $base directory does not exist"
+    fi
+  done
+
+  echo "Deployment completed."
+fi
