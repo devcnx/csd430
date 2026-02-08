@@ -17,7 +17,7 @@ body {
 }
 
 body {
-    font-family: 'Segoe UI', Arial, sans-serif;
+    font-family: 'DM Sans', 'Segoe UI', Arial, sans-serif;
     background: linear-gradient(120deg, #f8fafc 0%, #e0e7ef 100%);
     margin: 0;
     padding: 20px;
@@ -101,6 +101,15 @@ p.description {
     padding: 0 20px;
 }
 
+p.description.card {
+    background: #fff;
+    color: #333;
+    padding: 20px;
+    border-radius: 8px;
+    margin: 20px auto;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
 /* ==========================
    4. LISTS
    ========================== */
@@ -120,7 +129,35 @@ p.description {
 }
 
 /* ==========================
-   5. TABLES
+   5. NAVIGATION
+   ========================== */
+
+nav ul {
+    list-style: none;
+    padding: 0 20px;
+}
+
+nav ul li {
+    margin: 10px 0;
+}
+
+nav ul li a {
+    color: #2a3a5e;
+    text-decoration: none;
+    font-weight: 600;
+    padding: 8px 12px;
+    background: #f1f5fa;
+    border-radius: 6px;
+    transition: all 0.2s ease;
+}
+
+nav ul li a:hover {
+    background: #2a3a5e;
+    color: #fff;
+}
+
+/* ==========================
+   6. TABLES
    ========================== */
 
 table {
@@ -164,7 +201,7 @@ tr:hover {
 }
 
 /* ==========================
-   6. FOOTER
+   7. FOOTER
    ========================== */
 
 footer {
@@ -224,5 +261,9 @@ footer p {
 
     .field-descriptions li {
         padding: 8px 12px;
+    }
+
+    nav ul {
+        padding: 0 10px;
     }
 }
