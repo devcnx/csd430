@@ -3,7 +3,7 @@
 <html>
 <head>
     <meta charset="UTF-8">
-    <title><%= application.getServletContextName() %></title>
+    <title><%= application.getServletContext().getServletContextName() %></title>
     <style>
         *, html, body {
             margin: 0;
@@ -48,7 +48,7 @@
     </style>
 </head>
 <body>
-    <h1>Welcome to <%= application.getServletContextName() %></h1>
+    <h1>Welcome to <%= application.getServletContext().getServletContextName() %></h1>
     
     <div class="info-box">
         <p>This is a JavaServer Page (JSP) running on Apache Tomcat.</p>
