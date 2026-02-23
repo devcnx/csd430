@@ -29,3 +29,8 @@
 
 # Ignore editor files
 .editorconfig
+
+# Ignore environment files (secrets, credentials)
+.env
+*.env
+.env.*
