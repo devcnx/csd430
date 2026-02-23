@@ -61,6 +61,6 @@ This assignment focuses on **database setup** using MySQL. You will create a dat
 
 ---
 
-**Student:** Brittney Perry-Morgan  
+**Student:** Brittaney Perry-Morgan  
 **Course:** CSD430 Server-Side Development  
 **Term:** 2265 Spring

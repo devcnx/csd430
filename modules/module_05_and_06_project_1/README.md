@@ -112,6 +112,6 @@ Open browser to: `http://localhost:8080/module_05_and_06_project_1/`
 
 ---
 
-**Student:** Brittney Perry-Morgan  
+**Student:** Brittaney Perry-Morgan  
 **Course:** CSD430 Server-Side Development  
 **Term:** 2265 Spring

@@ -49,7 +49,6 @@ public class MovieBean {
         if (DB_USER == null) DB_USER = "student1";
         if (DB_PASSWORD == null) DB_PASSWORD = "pass";
     }
-    }
     
     private Connection connection;
     private List<Integer> movieIds;
@@ -100,7 +99,7 @@ public class MovieBean {
         }
         
         try {
-            String query = "SELECT movie_id FROM brittany_movies_data ORDER BY movie_id";
+            String query = "SELECT movie_id FROM brittaney_movies_data ORDER BY movie_id";
             PreparedStatement stmt = connection.prepareStatement(query);
             resultSet = stmt.executeQuery();
             
@@ -125,7 +124,7 @@ public class MovieBean {
         }
         
         try {
-            String query = "SELECT * FROM brittany_movies_data WHERE movie_id = ?";
+            String query = "SELECT * FROM brittaney_movies_data WHERE movie_id = ?";
             PreparedStatement stmt = connection.prepareStatement(query);
             stmt.setInt(1, movieId);
             resultSet = stmt.executeQuery();

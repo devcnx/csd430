@@ -8,11 +8,11 @@ CREATE DATABASE IF NOT EXISTS CSD430;
 USE CSD430;
 
 -- Drop table if exists for clean setup
-DROP TABLE IF EXISTS brittany_movies_data;
+DROP TABLE IF EXISTS brittaney_movies_data;
 
 -- Create movies_data table with 5+ fields
 -- movie_id is primary key
-CREATE TABLE brittany_movies_data (
+CREATE TABLE brittaney_movies_data (
     movie_id INT PRIMARY KEY AUTO_INCREMENT,
     title VARCHAR(100) NOT NULL,
     genre VARCHAR(50) NOT NULL,
@@ -22,7 +22,7 @@ CREATE TABLE brittany_movies_data (
 );
 
 -- Insert minimum 10 records
-INSERT INTO brittany_movies_data (title, genre, release_year, rating, director) VALUES
+INSERT INTO brittaney_movies_data (title, genre, release_year, rating, director) VALUES
 ('The Shawshank Redemption', 'Drama', 1994, 'R', 'Frank Darabont'),
 ('The Godfather', 'Crime', 1972, 'R', 'Francis Ford Coppola'),
 ('The Dark Knight', 'Action', 2008, 'PG-13', 'Christopher Nolan'),
@@ -37,7 +37,7 @@ INSERT INTO brittany_movies_data (title, genre, release_year, rating, director) 
 ('The Avengers', 'Superhero', 2012, 'PG-13', 'Joss Whedon');
 
 -- Verify data
-SELECT * FROM brittany_movies_data;
+SELECT * FROM brittaney_movies_data;
 
 -- Grant permissions for student1 user
 -- Note: This should be run by database admin
