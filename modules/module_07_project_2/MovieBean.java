@@ -99,7 +99,7 @@ public class MovieBean {
         }
         
         try {
-            String query = "SELECT movie_id FROM brittany_movies_data ORDER BY movie_id";
+            String query = "SELECT movie_id FROM brittaney_movies_data ORDER BY movie_id";
             PreparedStatement stmt = connection.prepareStatement(query);
             resultSet = stmt.executeQuery();
             
@@ -124,7 +124,7 @@ public class MovieBean {
         }
         
         try {
-            String query = "SELECT * FROM brittany_movies_data WHERE movie_id = ?";
+            String query = "SELECT * FROM brittaney_movies_data WHERE movie_id = ?";
             PreparedStatement stmt = connection.prepareStatement(query);
             stmt.setInt(1, movieId);
             resultSet = stmt.executeQuery();
@@ -150,7 +150,7 @@ public class MovieBean {
         }
         
         try {
-            String query = "SELECT * FROM brittany_movies_data ORDER BY movie_id";
+            String query = "SELECT * FROM brittaney_movies_data ORDER BY movie_id";
             PreparedStatement stmt = connection.prepareStatement(query);
             resultSet = stmt.executeQuery();
             return true;
@@ -168,7 +168,7 @@ public class MovieBean {
         }
         
         try {
-            String query = "INSERT INTO brittany_movies_data (title, genre, release_year, rating, director) VALUES (?, ?, ?, ?, ?)";
+            String query = "INSERT INTO brittaney_movies_data (title, genre, release_year, rating, director) VALUES (?, ?, ?, ?, ?)";
             PreparedStatement stmt = connection.prepareStatement(query);
             stmt.setString(1, title);
             stmt.setString(2, genre);
