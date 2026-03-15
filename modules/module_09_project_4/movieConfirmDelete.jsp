@@ -135,13 +135,10 @@
             <li><strong>Director:</strong> Director of the movie</li>
         </ul>
 
-        <form action="movieProcessDelete.jsp" method="post" onsubmit="return confirm('Are you absolutely sure you want to delete this movie? This action cannot be undone!');">
-            <input type="hidden" name="movieId" value="<%= movieId %>">
-            <div class="form-actions">
-                <button type="submit" class="btn-submit" style="background-color: #dc3545;">Yes, Delete Movie</button>
-                <a href="movieDelete.jsp" class="btn-reset">Cancel</a>
-            </div>
-        </form>
+        <div class="form-actions">
+            <a href="movieProcessDelete.jsp?movieId=<%= movieId %>" class="btn-submit" style="background-color: #dc3545;">Yes, Delete Movie</a>
+            <a href="movieDelete.jsp" class="btn-reset">Cancel</a>
+        </div>
 
         <div class="form-actions">
             <a href="index.jsp" class="btn-reset">Back to Course Index</a>
