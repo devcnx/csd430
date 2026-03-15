@@ -5,27 +5,25 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>com.csd430</groupId>
-    <artifactId>csd430-parent</artifactId>
+    <artifactId>module_05_and_06</artifactId>
     <version>1.0-SNAPSHOT</version>
-    <packaging>pom</packaging>
-    <name>CSD430 Server-Side Development - Parent</name>
-    <description>Parent project for CSD430 module assignments</description>
-
-    <modules>
-        <module>modules/module_02</module>
-        <module>modules/module_03</module>
-        <module>modules/module_04</module>
-        <module>modules/module_05_and_06</module>
-    </modules>
+    <packaging>war</packaging>
+    <name>CSD430 Module 5 &amp; 6 - Movie Database CRUD</name>
+    <description>Module 5 &amp; 6: JDBC &amp; JavaBeans - CRUD READ Operations</description>
 
     <properties>
         <maven.compiler.source>17</maven.compiler.source>
         <maven.compiler.target>17</maven.compiler.target>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <tomcat.version>10.1.52</tomcat.version>
     </properties>
 
     <dependencies>
+        <!-- MySQL JDBC Driver -->
+        <dependency>
+            <groupId>mysql</groupId>
+            <artifactId>mysql-connector-java</artifactId>
+            <version>5.1.49</version>
+        </dependency>
         <!-- Jakarta Servlet API -->
         <dependency>
             <groupId>jakarta.servlet</groupId>
@@ -33,37 +31,12 @@
             <version>5.0.0</version>
             <scope>provided</scope>
         </dependency>
-
-        <!-- JSP API -->
+        <!-- Jakarta JSP API -->
         <dependency>
             <groupId>jakarta.servlet.jsp</groupId>
             <artifactId>jakarta.servlet.jsp-api</artifactId>
             <version>3.0.0</version>
             <scope>provided</scope>
-        </dependency>
-
-        <!-- JSTL -->
-        <dependency>
-            <groupId>jakarta.servlet.jsp.jstl</groupId>
-            <artifactId>jakarta.servlet.jsp.jstl-api</artifactId>
-            <version>2.0.0</version>
-        </dependency>
-
-        <!-- Spring Framework Dependencies for Module 07 (AOP) -->
-        <dependency>
-            <groupId>org.springframework</groupId>
-            <artifactId>spring-context</artifactId>
-            <version>6.1.14</version>
-        </dependency>
-        <dependency>
-            <groupId>org.springframework</groupId>
-            <artifactId>spring-aop</artifactId>
-            <version>6.1.14</version>
-        </dependency>
-        <dependency>
-            <groupId>org.aspectj</groupId>
-            <artifactId>aspectjweaver</artifactId>
-            <version>1.9.22.1</version>
         </dependency>
     </dependencies>
 

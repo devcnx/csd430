@@ -1,8 +1,23 @@
-# Module 5 & 6 Assignment - Working with CRUD-READ, JDBC, & JavaBeans
+# CSD430 SERVER-SIDE DEVELOPMENT
+
+<!-- markdownlint-disable -->
+<small style="font-size: 0.9em; font-family: 'Proxima Nova Alt', sans-serif; text-align: justify;">
+<!-- markdownlint-enable -->
+
+**Term**: 2265 Spring  
+**Duration**: January 2026 - March 2026
+
+**Author**: Brittaney Perry-Morgan  
+
+**Instructor**: Jack Lusby  
+**Institution**: Bellevue University
+
+## Module 5 & 6 Assignment - Working with CRUD-READ, JDBC, & JavaBeans
 
 ## Assignment Overview
 
-This assignment focuses on **database setup** using MySQL. You will create a database, build a table with appropriate fields, and populate it with sample data.
+This assignment focuses on **database setup** using MySQL. You will create a
+database, build a table with appropriate fields, and populate it with sample data.
 
 ## Requirements
 
@@ -14,33 +29,47 @@ This assignment focuses on **database setup** using MySQL. You will create a dat
 
 ## Database Configuration
 
-| Setting | Value |
-|---------|-------|
-| Database Name | `CSD430` |
-| Username | `student1` |
-| Password | `pass` |
-| Table Name | `brittaney_movies_data` |
+| Setting     | Value                   |
+|-------------|-------------------------|
+| Database    | `CSD430`                |
+| Table       | `brittaney_movies_data` |
+| Username    | `student1`              |
+| Password    | `pass`                  |
+
+## Table Fields
+
+| Field         | Type         | Description            |
+|---------------|--------------|------------------------|
+| `movie_id`    | INT          | Primary Key, Auto-inc  |
+| `title`       | VARCHAR(100) | Movie title            |
+| `genre`       | VARCHAR(50)  | Movie genre            |
+| `release_year`| INT          | Year released          |
+| `rating`      | VARCHAR(10)  | MPAA rating            |
+| `director`    | VARCHAR(100) | Director name          |
 
 ## Files
 
-| File | Description |
-|------|-------------|
-| `brittaney_movies_data.sql` | SQL script to create database, table, and insert records |
-| `screenshots/` | Folder for MySQL Workbench screenshots |
+| File                              | Description            |
+|-----------------------------------|------------------------|
+| `brittaney_movies_data.sql`       | SQL script for setup   |
+| `deliverables/screenshot_*.html`  | Screenshot templates   |
 
-## How to Run
+## Setup Instructions
 
 1. Start MySQL:
+
    ```bash
    brew services start mysql
    ```
 
 2. Run the SQL script:
+
    ```bash
    mysql -u root -p < brittaney_movies_data.sql
    ```
 
 3. Create the user (if not exists):
+
    ```sql
    CREATE USER IF NOT EXISTS 'student1'@'localhost' IDENTIFIED BY 'pass';
    GRANT ALL PRIVILEGES ON CSD430.* TO 'student1'@'localhost';
@@ -51,16 +80,15 @@ This assignment focuses on **database setup** using MySQL. You will create a dat
 
 1. MySQL Workbench showing the `CSD430` database
 2. Table structure (DESCRIBE or Schema view)
-3. All records in the table (SELECT * FROM brittaney_movies_data)
+3. All records in the table (`SELECT * FROM brittaney_movies_data`)
 
 ## Submission
 
 - Screenshots combined in a Word document
 - SQL file
-- File naming: `perrymorgan-mod56-csd430.zip`
+- Submit to GitHub repository
 
 ---
-
-**Student:** Brittaney Perry-Morgan  
-**Course:** CSD430 Server-Side Development  
-**Term:** 2265 Spring
+s
+</small>
+s
