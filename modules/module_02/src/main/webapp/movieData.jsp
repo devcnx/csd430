@@ -100,6 +100,13 @@
             <% } %>
         </ul>
 
+        <h3>Record Descriptions</h3>
+        <ul class="field-descriptions">
+            <% for (String desc : recordDescriptions) { %>
+                <li><%= desc %></li>
+            <% } %>
+        </ul>
+
         <h3>Cast Details</h3>
         <table>
             <thead>
