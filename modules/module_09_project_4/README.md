@@ -19,7 +19,7 @@ This module implements the DELETE operation for the movie database CRUD applicat
 ## Files
 
 | File | Description |
-|------|-------------|
+| ------ | ------------- |
 | `MovieBean.java` | JavaBean with CRUD methods including `deleteMovie()` and `movieExists()` |
 | `index.jsp` | Module landing page with links to all CRUD operations |
 | `movie_delete.jsp` | Movie selection dropdown for deletion |
@@ -54,7 +54,7 @@ Checks if a movie exists in the database before attempting deletion.
 ## CRUD Summary
 
 | Module | Operation | Status |
-|--------|-----------|--------|
+| -------- | ----------- | -------- |
 | 5&6 | Database Setup + READ | ✅ Complete |
 | 7 | CREATE | ✅ Complete |
 | 8 | UPDATE | ✅ Complete |
@@ -65,7 +65,7 @@ Checks if a movie exists in the database before attempting deletion.
 Table: `brittany_movies_data`
 
 | Column | Type |
-|--------|------|
+| -------- | ------ |
 | movie_id | INT (Auto Increment) |
 | title | VARCHAR |
 | genre | VARCHAR |
