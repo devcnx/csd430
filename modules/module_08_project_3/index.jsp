@@ -1,93 +1,78 @@
 <%-- 
-    CSD380 Course Index - Module 08 Assignment
-    Student: Brittaney Perry-Morgan
-    This index page provides links to all module's CRUD deliverables
+    CSD430 Server-Side Development
+
+    Module 8 Project Part 3: CRUD-UPDATE Operations
+    Author: Brittaney Perry-Morgan
+
+    Description: Course index page with navigation to movie database
+    application demonstrating JDBC connectivity and JavaBeans for
+    CRUD-UPDATE operations.
+
+    index.jsp - Course Index Page
 --%>
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CSD430 - Database Management Course</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            max-width: 800px;
-            margin: 50px auto;
-            padding: 20px;
-            background-color: #f5f5f5;
-        }
-        h1 {
-            color: #333;
-            text-align: center;
-            border-bottom: 2px solid #0066cc;
-            padding-bottom: 10px;
-        }
-        .course-info {
-            text-align: center;
-            margin-bottom: 30px;
-            color: #666;
-        }
-        .module-list {
-            list-style: none;
-            padding: 0;
-        }
-        .module-list li {
-            margin: 15px 0;
-        }
-        .module-list a {
-            display: block;
-            padding: 15px 20px;
-            background-color: white;
-            border: 1px solid #ddd;
-            border-radius: 5px;
-            text-decoration: none;
-            color: #333;
-            transition: all 0.3s ease;
-        }
-        .module-list a:hover {
-            background-color: #ffc107;
-            color: #333;
-            border-color: #ffc107;
-        }
-        .module-list a.current {
-            background-color: #ffc107;
-            color: #333;
-            border-color: #ffc107;
-        }
-        .module-title {
-            font-weight: bold;
-            font-size: 1.1em;
-        }
-        .module-desc {
-            font-size: 0.9em;
-            margin-top: 5px;
-            opacity: 0.8;
-        }
-    </style>
+    <title>Module 8 Project Part 3 - CRUD-UPDATE Operations</title>
+    <link rel="stylesheet" type="text/css" href="css/styles.css">
 </head>
 <body>
-    <h1>CSD430 - Database Management</h1>
-    
-    <div class="course-info">
-        <p>Student: Brittaney Perry-Morgan</p>
-        <p>Course: CSD380 - Working with JDBC, JavaBeans, and CRUD Operations</p>
+    <div class="container top-title">
+        <h1>Module 8 Project Part 3</h1>
+        <h2>JDBC & JavaBeans - <em>CRUD-UPDATE Operations</em></h2>
+        <p class="description">Author: Brittaney Perry-Morgan</p>
     </div>
-    
-    <ul class="module-list">
-        <li>
-            <a href="movie_update.jsp" class="current">
-                <div class="module-title">Module 08 - Movies Database (CRUD-UPDATE)</div>
-                <div class="module-desc">Update existing movie records in the database</div>
-            </a>
-        </li>
-    </ul>
-    
-    <h2>Access Module 08 Assignment</h2>
-    <p>Click the link below to access the Movie Database application:</p>
-    <p><a href="movie_update.jsp" style="color: #0066cc; font-weight: bold;">Update Movie</a></p>
-    <p><a href="movie_display.jsp?movieId=1" style="color: #0066cc; font-weight: bold;">View Movie (Example)</a></p>
-    
+
+    <div class="container">
+        <h3>Movie Database CRUD Operations</h3>
+        <p class="description">
+            This web application demonstrates database connectivity using JDBC
+            and JavaBeans for Create, Read, Update, and Delete (CRUD) operations.
+            Module 8 focuses on <strong>UPDATE</strong> operations - modifying
+            existing movie records.
+        </p>
+
+        <h3>Database Information</h3>
+        <ul class="field-descriptions">
+            <li><strong>Database Name:</strong> CSD430</li>
+            <li><strong>Table Name:</strong> brittaney_movies_data</li>
+            <li><strong>Username:</strong> student1</li>
+            <li><strong>Topic:</strong> Movies</li>
+            <li><strong>Fields:</strong> 6 (movie_id, title, genre, release_year, rating, director)</li>
+        </ul>
+
+        <h3>Navigation - UPDATE Operations</h3>
+        <nav>
+            <ul>
+                <li>
+                    <a href="movieSelection.jsp">Edit Movie</a>
+                    <span class="nav-desc">Select a movie from dropdown to edit</span>
+                </li>
+                <li>
+                    <a href="movieDisplay.jsp">View All Movies</a>
+                    <span class="nav-desc">Display all movie records with edit links</span>
+                </li>
+                <li>
+                    <a href="/module_05_and_06_project_1/movieSelection.jsp">View Movie Details (Module 5&6)</a>
+                    <span class="nav-desc">READ operation - view individual movie details</span>
+                </li>
+                <li>
+                    <a href="/module_07_project_2/movieForm.jsp">Add New Movie (Module 7)</a>
+                    <span class="nav-desc">CREATE operation - add a new movie record</span>
+                </li>
+                <li>
+                    <a href="/module_09_project_4/movieDelete.jsp">Delete Movie (Module 9)</a>
+                    <span class="nav-desc">DELETE operation - remove records from database</span>
+                </li>
+            </ul>
+        </nav>
+    </div>
+
+    <footer>
+        <p>&copy; 2026 Brittaney Perry-Morgan | CSD430 Server-Side Development</p>
+    </footer>
 </body>
 </html>

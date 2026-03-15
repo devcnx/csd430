@@ -1,6 +1,6 @@
 -- CSD430 Database Setup Script
 -- Student: Brittaney Perry-Morgan
--- Course: CSD380
+-- Course: CSD430
 -- Module 05 & 06 Assignment
 
 -- Create database if not exists
@@ -41,5 +41,5 @@ SELECT * FROM brittaney_movies_data;
 
 -- Grant permissions for student1 user
 -- Note: This should be run by database admin
--- GRANT ALL PRIVILEGES ON CSD430.* TO 'student1'@'localhost' IDENTIFIED BY 'pass';
+-- GRANT ALL PRIVILEGES ON CSD430.* TO 'student1'@'localhost' IDENTIFIED BY '****';
 -- FLUSH PRIVILEGES;
