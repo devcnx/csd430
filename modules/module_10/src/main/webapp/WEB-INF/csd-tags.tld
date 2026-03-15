@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<taglib xmlns="https://jakarta.ee/xml/ns/jakartaee"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="https://jakarta.ee/xml/ns/jakartaee https://jakarta.ee/xml/ns/jakartaee/web-jsptaglibrary_3_0.xsd"
+        version="3.0">
+    
+    <description>CSD430 Custom Tags Library</description>
+    <display-name>CSD430 Tags</display-name>
+    <tlib-version>1.0</tlib-version>
+    <short-name>csd</short-name>
+    <uri>http://example.com/csd430/tags</uri>
+    
+    <!-- Greeting Tag -->
+    <tag>
+        <description>
+            Displays a personalized greeting based on the time of day.
+            Supports 'name' and 'timeFormat' attributes.
+        </description>
+        <name>greeting</name>
+        <tag-class>com.example.GreetingTag</tag-class>
+        <body-content>empty</body-content>
+        
+        <!-- 'name' attribute - optional -->
+        <attribute>
+            <description>The name of the person to greet</description>
+            <name>name</name>
+            <required>false</required>
+            <rtexprvalue>true</rtexprvalue>
+        </attribute>
+        
+        <!-- 'timeFormat' attribute - optional, defaults to 'full' -->
+        <attribute>
+            <description>Time format: 'short', 'medium', or 'full'</description>
+            <name>timeFormat</name>
+            <required>false</required>
+            <rtexprvalue>true</rtexprvalue>
+        </attribute>
+    </tag>
+    
+</taglib>
