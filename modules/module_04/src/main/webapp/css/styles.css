@@ -120,7 +120,77 @@ p.description {
 }
 
 /* =========================
-   5. NAVIGATION
+   5. FORMS
+   ========================= */
+
+.form-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px;
+    background: #fff;
+}
+
+.form-table tr {
+    background: #fff;
+}
+
+.form-table td {
+    border: 1px solid #e3eaf6;
+    padding: 12px 15px;
+    vertical-align: top;
+}
+
+.form-table td:first-child {
+    background: #f9fbfd;
+    width: 25%;
+    font-weight: 600;
+    color: #1a2540;
+}
+
+.form-table td:last-child {
+    width: 75%;
+}
+
+.form-table label {
+    display: block;
+    margin-bottom: 5px;
+    font-size: 0.9rem;
+    color: #333;
+}
+
+.form-table input[type="text"],
+.form-table input[type="email"],
+.form-table input[type="tel"],
+.form-table input[type="number"],
+.form-table input[type="date"],
+.form-table select,
+.form-table textarea {
+    width: 100%;
+    padding: 10px 12px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 1rem;
+    font-family: 'Segoe UI', Arial, sans-serif;
+    box-sizing: border-box;
+}
+
+.form-table select {
+    background: #fff;
+    cursor: pointer;
+}
+
+.form-table textarea {
+    resize: vertical;
+    min-height: 80px;
+}
+
+.form-table input[type="checkbox"] {
+    width: auto;
+    margin-right: 8px;
+}
+
+/* =========================
+   6. NAVIGATION
    ========================= */
 
 nav ul {
@@ -194,7 +264,53 @@ nav ul li a:hover {
 }
 
 /* =========================
-   7. TABLES
+   7. FORM ACTIONS (for button links)
+   ========================= */
+
+.form-actions {
+    margin: 30px 20px;
+    padding: 15px;
+    background: #f9fbfd;
+    border-radius: 8px;
+    text-align: center;
+}
+
+.btn-submit,
+.btn-reset {
+    padding: 12px 24px;
+    margin: 0 10px;
+    font-size: 1rem;
+    font-weight: 600;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    text-decoration: none;
+    display: inline-block;
+}
+
+.btn-submit {
+    background: #2a3a5e;
+    color: #fff;
+}
+
+.btn-submit:hover {
+    background: #1a2540;
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px rgba(42, 58, 94, 0.3);
+}
+
+.btn-reset {
+    background: #e3eaf6;
+    color: #2a3a5e;
+}
+
+.btn-reset:hover {
+    background: #cdd8eb;
+}
+
+/* =========================
+   8. TABLES
    ========================= */
 
 table {
@@ -239,7 +355,7 @@ tr:hover {
 }
 
 /* =========================
-   8. FOOTER
+   9. FOOTER
    ========================= */
 
 footer {
@@ -254,7 +370,7 @@ footer p {
 }
 
 /* =========================
-   9. RESPONSIVE DESIGN
+   10. RESPONSIVE DESIGN
    ========================= */
 
 @media (max-width: 768px) {
@@ -277,6 +393,30 @@ footer p {
 
     h3 {
         font-size: 1rem;
+    }
+
+    .form-table {
+        margin: 10px 0;
+        font-size: 0.85rem;
+    }
+
+    .form-table td {
+        padding: 8px 10px;
+    }
+
+    .form-table td:first-child {
+        font-size: 0.85rem;
+    }
+
+    .form-table input[type="text"],
+    .form-table input[type="email"],
+    .form-table input[type="tel"],
+    .form-table input[type="number"],
+    .form-table input[type="date"],
+    .form-table select,
+    .form-table textarea {
+        font-size: 0.9rem;
+        padding: 8px;
     }
 
     table {

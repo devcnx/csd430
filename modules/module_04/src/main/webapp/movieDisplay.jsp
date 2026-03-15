@@ -141,6 +141,12 @@
                 <% } %>
             </tbody>
         </table>
+
+        <div class="form-actions">
+            <a href="castDisplay.jsp" class="btn-submit">View Cast Details</a>
+            <a href="productionDisplay.jsp" class="btn-reset">View Production Info</a>
+            <a href="index.jsp" class="btn-reset">Back to Home</a>
+        </div>
     </div>
 
     <footer>
